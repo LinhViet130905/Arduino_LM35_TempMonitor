@@ -1,22 +1,21 @@
-const int sensorPin = A0; 
+const int sensorPins[] = {A0, A1}; 
+int adcValues[2]; 
 
 void setup() {
-   Serial.begin(9600);
-  Serial.println("--- Bat dau doc nhiet do tu LM35 ---");
+  Serial.begin(9600);
 }
 
 void loop() {
-  int reading = analogRead(sensorPin);
-  float voltage = reading * (5.0 / 1024.0);
-  float temperatureC = voltage * 100.0;
+  for (int i = 0; i < 2; i++) {
+    adcValues[i] = analogRead(sensorPins[i]);
+  }
 
-  Serial.print("Gia tri ADC: ");
-  Serial.print(reading);
-  Serial.print(" | Dien ap: ");
-  Serial.print(voltage);
-  Serial.print("V | Nhiet do: ");
-  Serial.print(temperatureC);
-  Serial.println(" C");
+  float temp1 = (adcValues[0] * 5.0 * 100.0) / 1024.0;
+  float temp2 = (adcValues[1] * 5.0 * 100.0) / 1024.0;
 
-  delay(1000);
+  Serial.print(temp1);
+  Serial.print(",");
+  Serial.println(temp2);
+
+  delay(1000); 
 }
