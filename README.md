@@ -1,4 +1,13 @@
 Dự án Giám sát Nhiệt độ dùng cảm biến LM35 và Arduino
+## Tác giả
+
+Dự án được thực hiện và quản lý bởi:
+
+* **[Lý Việt Linh]**
+
+  * Vai trò: Thiết kế mạch, Lập trình firmware, Quản lý Git.
+  
+  * Trang cá nhân: [https://linhviet130905.github.io](https://linhviet130905.github.io)
 
 📝 Giới thiệu: Dự án này được thực hiện nhằm mục đích đo lường và giám sát nhiệt độ môi trường sử dụng cảm biến Analog LM35 và board mạch Arduino. Dữ liệu nhiệt độ sẽ được xử lý và hiển thị trực tiếp lên Serial Monitor/Serial Plotter của Arduino IDE.
 
